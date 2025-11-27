@@ -1,5 +1,5 @@
-SCRIPTS=opnsense-bootstrap.sh
-MAN=	opnsense-bootstrap.8
+SCRIPTS=comsecurity-bootstrap.sh
+MAN=	comsecurity-bootstrap.8
 
 LOCALBASE?=${DESTDIR}/usr/local
 PREFIX?=${LOCALBASE}

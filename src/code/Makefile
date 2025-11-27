@@ -1,5 +1,5 @@
-SCRIPTS=opnsense-code.sh
-MAN=	opnsense-code.8
+SCRIPTS=comsecurity-code.sh
+MAN=	comsecurity-code.8
 
 LOCALBASE?=${DESTDIR}/usr/local
 PREFIX?=${LOCALBASE}

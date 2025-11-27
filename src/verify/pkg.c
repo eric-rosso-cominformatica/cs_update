@@ -722,7 +722,7 @@ cleanup:
 static void
 usage(void)
 {
-	fprintf(stderr, "Usage: man opnsense-verify\n");
+	fprintf(stderr, "Usage: man comsecurity-verify\n");
 	exit(EXIT_FAILURE);
 }
 
@@ -771,7 +771,7 @@ main(int argc, char *argv[])
 	}
 
 	if (!use_repo) {
-		use_repo = strdup("OPNsense");
+		use_repo = strdup(".Com Security");
 	}
 
 	config_init(use_repo);

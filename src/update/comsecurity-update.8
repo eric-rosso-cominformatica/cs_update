@@ -25,11 +25,11 @@
 .\" SUCH DAMAGE.
 .\"
 .Dd August 7, 2025
-.Dt OPNSENSE-UPDATE 8
+.Dt COMSECURITY-UPDATE 8
 .Os
 .Sh NAME
-.Nm opnsense-update
-.Nd OPNsense update utility
+.Nm comsecurity-update
+.Nd .Com Security update utility
 .Sh SYNOPSIS
 .Nm
 .Op Fl BbCdeFfiKkPpqRsuVvz
@@ -81,7 +81,7 @@ Change the set fetch and package release ABI to
 Change the
 .Ar abi_hint
 from the detected default
-.Pq output of Sq opnsense-verify Fl a
+.Pq output of Sq comsecurity-verify Fl a
 to a specific value.
 If a subdirectory is appended,
 .Fl A Ar mirror_abi
@@ -138,7 +138,7 @@ and package manager bugs.
 .It Fl i
 Ignore the signature verification result.
 Otherwise, the
-.Xr opnsense-verify 8
+.Xr comsecurity-verify 8
 utility is used to verify a set signature.
 The default is off meaning secure, unless the package mirror
 configuration does not use fingerprints.
@@ -210,7 +210,7 @@ properly handling the
 .Sq vital
 flag transition.
 The
-.Xr opnsense-version 8
+.Xr comsecurity-version 8
 utility is used to test which version is currently installed.
 .It Fl U
 Unlock a set to allow updates.
@@ -247,55 +247,55 @@ This does not affect
 .El
 .Sh FILES
 .Bl -tag -width Ds
-.It Pa /usr/local/etc/opnsense-update.conf
+.It Pa /usr/local/etc/comsecurity-update.conf
 Configuration file with advanced settings, e.g. for major
 release upgrade hints.
-.It Pa /usr/local/etc/pkg/repos/OPNsense.conf
+.It Pa /usr/local/etc/pkg/repos/.Com Security.conf
 The
 .Xr pkg.conf 5
 file used to configure the packages mirror.
-.It Pa /usr/local/opnsense/version/base
+.It Pa /usr/local/comsecurity/version/base
 The file is used to check if a base system upgrade is necessary.
 It is embedded into the base set.
-.It Pa /usr/local/opnsense/version/base.lock
+.It Pa /usr/local/comsecurity/version/base.lock
 The lock for preventing an update to the base system,
 operated by
 .Sq Fl \&Lb
 and
 .Sq Fl \&Ub .
-.It Pa /usr/local/opnsense/version/base.obsolete
+.It Pa /usr/local/comsecurity/version/base.obsolete
 The file is used to list files to be removed after installation
 which are no longer required, operated by
 .Sq Fl C .
 It is embedded into the base set.
-.It Pa /usr/local/opnsense/version/kernel
+.It Pa /usr/local/comsecurity/version/kernel
 The file is used to check if a kernel upgrade is necessary.
 It is embedded into the kernel set.
-.It Pa /usr/local/opnsense/version/kernel.lock
+.It Pa /usr/local/comsecurity/version/kernel.lock
 The lock for preventing updates to the kernel,
 operated by
 .Sq Fl \&Lk
 and
 .Sq Fl \&Uk .
-.It Pa /usr/local/opnsense/version/pkgs
+.It Pa /usr/local/comsecurity/version/pkgs
 The file is used to check if a packages upgrade is necessary.
 It is created by
 .Nm .
-.It Pa /usr/local/opnsense/version/pkgs.lock
+.It Pa /usr/local/comsecurity/version/pkgs.lock
 The lock for preventing an update to all packages,
 operated by
 .Sq Fl \&Lp
 and
 .Sq Fl \&Up .
-.It Pa /var/cache/opnsense-update
+.It Pa /var/cache/comsecurity-update
 The local cache storage directory.
 .El
 .Sh EXIT STATUS
 .Ex -std
 .Sh SEE ALSO
 .Xr pkg.conf 5 ,
-.Xr opnsense-verify 8 ,
-.Xr opnsense-version 8 ,
+.Xr comsecurity-verify 8 ,
+.Xr comsecurity-version 8 ,
 .Xr pkg 8
 .Sh AUTHORS
 .An Franco Fichtner Aq Mt franco@opnsense.org

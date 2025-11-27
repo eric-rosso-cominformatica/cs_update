@@ -1,5 +1,5 @@
-SCRIPTS=opnsense-revert.sh
-MAN=	opnsense-revert.8
+SCRIPTS=comsecurity-revert.sh
+MAN=	comsecurity-revert.8
 
 LOCALBASE?=${DESTDIR}/usr/local
 PREFIX?=${LOCALBASE}
